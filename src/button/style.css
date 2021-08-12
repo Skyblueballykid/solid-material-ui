@@ -1,0 +1,41 @@
+@import '../variables.css';
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@500&display=swap');
+
+$button-height: 2.25rem;
+
+.btn {
+  position: relative;
+  border-radius: $normal-border-radius;
+  box-sizing: content-box;
+  line-height: normal;
+  padding: 0 $normal-padding;
+  text-transform: uppercase;
+  cursor: pointer;
+  > span {
+    font-family: 'Work Sans', sans-serif;
+    box-sizing: border-box;
+    font-size: 0.875rem;
+    font-weight: 500;
+    letter-spacing: 0.078125rem;
+  }
+  @each $color in $colors {
+    &.$(color).contained, &.$(color).text {
+      height: $button-height;
+      border: 0px solid;
+    }
+    &.$(color).outlined, &.$(color).text {
+      background-color: rgba(0, 0, 0, 0);
+      color: var(--$(color)-color);
+      --ripple-color: var(--$(color)-color);
+    }
+    &.$(color).contained {
+      background-color: var(--$(color)-color);
+      color: var(--on-$(color)-color);
+      --ripple-color: var(--on-$(color)-color);
+    }
+    &.$(color).outlined {
+      border: $normal-border-width solid var(--$(color)-color);
+      height: calc($button-height - ($normal-border-width * 2));
+    }
+  }
+}

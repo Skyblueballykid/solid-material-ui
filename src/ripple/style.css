@@ -1,0 +1,53 @@
+@import '../variables.css';
+
+$ripple-opacity: 0.3;
+$ripple-scale: 2.5;
+
+.ripple {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  overflow: hidden;
+  background-color: transparent;
+  border-radius: $normal-border-radius;
+  &::before, &::after {
+    content: "";
+    position: absolute;
+    background-color: var(--ripple-color);
+  }
+  &::before {
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    opacity: 0;
+  }
+  &:hover::before {
+    opacity: 0.1;
+  }
+  &::after {
+    top: var(--ripple-position-y);
+    left: var(--ripple-position-x);
+    width: var(--ripple-size);
+    height: var(--ripple-size);
+    border-radius: 50%;
+    transform: scale($ripple-scale);
+    transition: opacity 75ms;
+    opacity: 0;
+  }
+  &:active::after {
+    opacity: $ripple-opacity;
+    animation: extend-radius-ripple 300ms normal;
+  }
+}
+
+@keyframes extend-radius-ripple {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale($ripple-scale);
+  }
+}
