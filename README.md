@@ -8,5 +8,10 @@ Material like (not everything implemented according the official [specification]
 
 ## TODOs:
 
-- Make storybook like examples
-- Make font selection variable
+- [ ] Make storybook like examples (W.I.P see playground)
+  - [ ] Make page skeleton
+    - [ ] List component
+    - [ ] Header component
+- [x] Make font selection variable
+- [ ] Fix ripple effect ([color calculation and opacity states](https://material.io/design/interaction/states.html#anatomy))
+- [ ] Make how to guides

@@ -1,6 +1,7 @@
 @import '../variables.css';
 
-$ripple-opacity: 0.3;
+$ripple-hover-opacity: 0.04;
+$ripple-focus-opacity: 0.12;
 $ripple-scale: 2.5;
 
 .ripple {
@@ -25,7 +26,7 @@ $ripple-scale: 2.5;
     opacity: 0;
   }
   &:hover::before {
-    opacity: 0.1;
+    opacity: 0.04
   }
   &::after {
     top: var(--ripple-position-y);
@@ -38,7 +39,7 @@ $ripple-scale: 2.5;
     opacity: 0;
   }
   &:active::after {
-    opacity: $ripple-opacity;
+    opacity: $ripple-focus-opacity;
     animation: extend-radius-ripple 300ms normal;
   }
 }

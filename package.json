@@ -1,7 +1,7 @@
 {
   "name": "solid-material-ui",
   "version": "0.1.0",
-  "main": "dist/index.js",
+  "main": "lib/index.js",
   "description": "Material like ui library using SolidJS.",
   "repository": "git@github.com:azuwey/solid-material-ui.git",
   "author": "David Zarandi <david.zarandi@pm.me>",
@@ -14,17 +14,20 @@
     "postcss-functions": "^4.0.2",
     "precss": "^4.0.0",
     "ts-standard": "^10.0.0",
-    "typescript": "^4.3.5"
+    "typescript": "^4.3.5",
+    "vite": "^2.5.6",
+    "vite-plugin-solid": "^2.0.3"
   },
   "dependencies": {
     "solid-js": "^1.1.0"
   },
   "scripts": {
-    "lint": "ts-standard",
     "clean:package": "rm -rf lib",
-    "prebuild:package": "yarn lint && yarn clean:package",
-    "build:package": "tsc",
-    "postbuild:package": "postcss src/**/*.css --base src --dir lib"
+    "lint:package": "ts-standard -p src/tsconfig.json src/",
+    "prebuild:package": "yarn lint:package && yarn clean:package",
+    "build:package": "tsc -p src/tsconfig.json",
+    "postbuild:package": "postcss src/**/*.css --base src --dir lib",
+    "dev:playground": "vite playground"
   },
   "files": [
     "/lib"
@@ -32,10 +35,15 @@
   "ts-standard": {
     "ignore": [
       "node_modules/*",
-      "dist/**/*"
+      "lib/**/*"
     ]
   },
   "keywords": [
-    "material", "like", "ui", "solidjs", "solid-js", "solid"
+    "material",
+    "like",
+    "ui",
+    "solidjs",
+    "solid-js",
+    "solid"
   ]
 }

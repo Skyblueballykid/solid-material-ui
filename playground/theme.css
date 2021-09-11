@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+
+$primary-color: #ffffff;
+$on-primary-color: textColor($primary-color);
+
+$secondary-color: #03dac5;
+$on-secondary-color: textColor($secondary-color);
+
+$normal-padding: 0.5rem;
+$normal-border-radius: 0.25rem;
+$normal-border-width: 0.0625rem;
+
+$headlines-subtitles-font-stack: "Roboto", "Helvetica", "Arial", sans-serif;
+$body-caption-font-stack: "Roboto", "Helvetica", "Arial", sans-serif;
+
+:root {
+  --primary-color: $primary-color;
+  --on-primary-color: $on-primary-color;
+    
+  --secondary-color: $secondary-color;
+  --on-secondary-color: $on-secondary-color;
+    
+  --normal-padding: $normal-padding;
+  --normal-border-radius: $normal-border-radius;
+  --normal-border-width: $normal-border-width;
+    
+  --headlines-subtitles-font-stack: $headlines-subtitles-font-stack;
+  --body-caption-font-stack: $body-caption-font-stack;
+}

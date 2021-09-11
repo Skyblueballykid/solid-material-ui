@@ -7,3 +7,5 @@ lib/**/*.css
 lib/**/*.css.map
 lib/**/*.d.ts
 .vscode
+**/*.log
+playground/dist/**/*

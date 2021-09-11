@@ -3,22 +3,15 @@
     "target": "ESNext",
     "module": "ESNext",
     "moduleResolution": "node",
-    "allowSyntheticDefaultImports": true,
-    "esModuleInterop": true,
     "jsx": "preserve",
     "jsxImportSource": "solid-js",
     "strictNullChecks": true,
     "declaration": true,
     "outDir": "lib",
-    "sourceMap": true
-  },
-  "include": [
-    "src/**/*"
-  ],
-  "exclude": [
-    "node_modules",
-    "dist",
-    "**/*.test.ts",
-    "**/*.doc.tsx"
-  ]
+    "sourceMap": true,
+    "rootDirs": [
+      "./src",
+      "./playground"
+    ]
+  }
 }
