@@ -4,6 +4,9 @@ $on-primary-color: var(--on-primary-color);
 $secondary-color: var(--secondary-color);
 $on-secondary-color: var(--on-secondary-color);
 
+$error-color: var(--error-color);
+$on-error-color: var(--on-error-color);
+
 $normal-padding: var(--normal-padding);
 $normal-border-radius: var(--normal-border-radius);
 $normal-border-width: var(--normal-border-width);

@@ -1,10 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
 
-$primary-color: #ffffff;
+$primary-color: #6200ee;
 $on-primary-color: textColor($primary-color);
 
-$secondary-color: #03dac5;
+$secondary-color: #03dac6;
 $on-secondary-color: textColor($secondary-color);
+
+$error-color: #b00020;
+$on-error-color: textColor($error-color);
 
 $normal-padding: 0.5rem;
 $normal-border-radius: 0.25rem;

@@ -8,15 +8,19 @@ $button-height: 2.25rem;
   box-sizing: content-box;
   line-height: normal;
   padding: 0 $normal-padding;
-  text-transform: uppercase;
   cursor: pointer;
+  &.contained, &.text {
+    height: $button-height;
+    border: unset;
+  }
+  &.outlined, &.text {
+    background-color: rgba(0, 0, 0, 0);
+  }
+  &.outlined {
+    height: calc($button-height - ($normal-border-width * 2));
+  }
   @each $color in $colors {
-    &.$(color).contained, &.$(color).text {
-      height: $button-height;
-      border: 0px solid;
-    }
     &.$(color).outlined, &.$(color).text {
-      background-color: rgba(0, 0, 0, 0);
       color: var(--$(color)-color);
       --ripple-color: var(--$(color)-color);
     }
@@ -27,7 +31,6 @@ $button-height: 2.25rem;
     }
     &.$(color).outlined {
       border: $normal-border-width solid var(--$(color)-color);
-      height: calc($button-height - ($normal-border-width * 2));
     }
   }
 }

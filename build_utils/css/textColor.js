@@ -41,12 +41,12 @@ function getContrastRatio (luminances) {
  * Calculate the text color from the provided color value
  *
  * @param {string} value
- * @return {string} rgb string
+ * @return {string} rgb hex string
  */
 module.exports = function textColor (value) {
   /** @type {Array<number>} */
   const rgba = fromString(value).toRgbaArray()
   const luminance = calculateLuminance(rgba.slice(0, 3))
   const color = new Array(3).fill(getContrastRatio([luminance, WHITE_LUMINANCE]) > getContrastRatio([luminance, BLACK_LUMINANCE]) ? 255 : 0)
-  return fromRgb(color).toRgbString()
+  return fromRgb(color).toHexString()
 }
