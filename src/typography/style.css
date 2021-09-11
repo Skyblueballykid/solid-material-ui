@@ -1,76 +1,89 @@
 @import '../variables.css';
-@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@500&display=swap');
 
 $button-height: 2.25rem;
 
 .typography {
-  font-family: 'Work Sans', sans-serif; // TODO: replace it with a variable
   box-sizing: border-box;
+  &.h1, &.h2, &.h3, &.h4, &.h5, &.h6, &.subtitle1, &.subtitle2 {
+    font-family: $headlines-subtitles-font-stack;
+  }
+  &.body1, &.body2, &.button, &.caption, &.overline {
+    font-family: $body-caption-font-stack;
+  }
+  &.h1 {
+    font-weight: 300;
+    font-size: 6rem;
+    letter-spacing: -0.09375rem;
+  }
+  &.h2 {
+    font-weight: 300;
+    font-size: 3.75rem;
+    letter-spacing: -0.03125rem;
+  }
+  &.h3 {
+    font-weight: 400;
+    font-size: 3rem;
+    letter-spacing: 0;
+  }
+  &.h4 {
+    font-weight: 400;
+    font-size: 2.125rem;
+    letter-spacing: 0.015625rem;
+  }
+  &.h5 {
+    font-weight: 400;
+    font-size: 1.5rem;
+    letter-spacing: 0;
+  }
+  &.h6 {
+    font-weight: 500;
+    font-size: 1.25rem;
+    letter-spacing: 0.009375rem;
+  }
+  &.subtitle1 {
+    font-weight: 400;
+    font-size: 1rem;
+    letter-spacing: 0.009375rem;
+  }
+  &.subtitle2 {
+    font-weight: 500;
+    font-size: 0.875rem;
+    letter-spacing: 0.00625rem;
+  }
+  &.body1 {
+    font-weight: 400;
+    font-size: 1rem;
+    letter-spacing: 0.03125rem;
+  }
+  &.body2 {
+    font-weight: 400;
+    font-size: 0.875rem;
+    letter-spacing: 0.015625rem;
+  }
+  &.button {
+    font-weight: 500;
+    font-size: 0.875rem;
+    letter-spacing: 0.078125rem;
+  }
+  &.caption {
+    font-weight: 400;
+    font-size: 0.75rem;
+    letter-spacing: 0.025rem;
+  }
+  &.overline {
+    font-weight: 400;
+    font-size: 0.625rem;
+    letter-spacing: 0.09375rem;
+  }
   @each $color in $colors {
-    &.$(color).h1 {
-      font-weight: 300;
-      font-size: 6rem;
-      letter-spacing: -0.09375rem;
+    &.$(color) {
+      color: var(--$(color)-color);
     }
-    &.$(color).h2 {
-      font-weight: 300;
-      font-size: 3.75rem;
-      letter-spacing: -0.03125rem;
+    &.text-$(color) {
+      color: var(--on-$(color)-color);
     }
-    &.$(color).h3 {
-      font-weight: 400;
-      font-size: 3rem;
-      letter-spacing: 0;
-    }
-    &.$(color).h4 {
-      font-weight: 400;
-      font-size: 2.125rem;
-      letter-spacing: 0.015625rem;
-    }
-    &.$(color).h5 {
-      font-weight: 400;
-      font-size: 1.5rem;
-      letter-spacing: 0rem;
-    }
-    &.$(color).h6 {
-      font-weight: 500;
-      font-size: 1.25rem;
-      letter-spacing: 0.009375rem;
-    }
-    &.$(color).subtitle1 {
-      font-weight: 400;
-      font-size: 1rem;
-      letter-spacing: 0.009375rem;
-    }
-    &.$(color).subtitle2 {
-      font-weight: 500;
-      font-size: 0.875rem;
-      letter-spacing: 0.00625rem;
-    }
-    &.$(color).body1 {
-      font-weight: 400;
-      font-size: 1rem;
-      letter-spacing: 0.03125rem;
-    }
-    &.$(color).body2 {
-      font-weight: 400;
-      font-size: 0.875rem;
-      letter-spacing: 0.015625rem;
-    }
-    &.$(color).button {
-      font-weight: 500;
-      font-size: 0.875rem;
-      letter-spacing: 0.078125rem;
-    }
-    &.$(color).caption {
-      font-weight: 400;
-      font-size: 0.75rem;
-      letter-spacing: 0.025rem;
-    }
-    &.$(color).overline {
-      font-weight: 400;
-      font-size: 0.625rem;
-      letter-spacing: 0.09375rem;
-    }
+  }
+  &.inherit {
+    color: 'inherit'
   }
 }

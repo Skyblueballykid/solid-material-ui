@@ -8,4 +8,7 @@ $normal-padding: var(--normal-padding);
 $normal-border-radius: var(--normal-border-radius);
 $normal-border-width: var(--normal-border-width);
 
+$headlines-subtitles-font-stack: var(--headlines-subtitles-font-stack);
+$body-caption-font-stack: var(--body-caption-font-stack);
+
 $colors: (primary, secondary);

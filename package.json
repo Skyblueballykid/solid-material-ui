@@ -21,7 +21,8 @@
   },
   "scripts": {
     "lint": "ts-standard",
-    "prebuild:package": "yarn lint && rm -rf lib",
+    "clean:package": "rm -rf lib",
+    "prebuild:package": "yarn lint && yarn clean:package",
     "build:package": "tsc",
     "postbuild:package": "postcss src/**/*.css --base src --dir lib"
   },
@@ -35,6 +36,6 @@
     ]
   },
   "keywords": [
-    "material", "like", "ui", "solidjs", "solid"
+    "material", "like", "ui", "solidjs", "solid-js", "solid"
   ]
 }
