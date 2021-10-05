@@ -1,5 +1,5 @@
 import { render } from 'solid-js/web'
-import {Button} from '../src'
+import Skeleton from './skeleton'
 import './theme.css'
 
-render(() => <div><Button>hello</Button></div>, document.getElementById('playground') ?? document.body)
+render(() => <Skeleton />, document.getElementById('playground') ?? document.body)

@@ -1,3 +1,6 @@
+$surface-color: var(--surface-color);
+$on-surface-color: var(--on-surface-color);
+
 $primary-color: var(--primary-color);
 $on-primary-color: var(--on-primary-color);
 
@@ -10,6 +13,7 @@ $on-error-color: var(--on-error-color);
 $normal-padding: var(--normal-padding);
 $normal-border-radius: var(--normal-border-radius);
 $normal-border-width: var(--normal-border-width);
+$normal-surface-height: var(--normal-surface-height);
 
 $headlines-subtitles-font-stack: var(--headlines-subtitles-font-stack);
 $body-caption-font-stack: var(--body-caption-font-stack);

@@ -12,7 +12,7 @@ $ripple-scale: 2.5;
   right: 0;
   overflow: hidden;
   background-color: transparent;
-  border-radius: $normal-border-radius;
+  border-radius: var(--ripple-border-radius);
   &::before, &::after {
     content: "";
     position: absolute;

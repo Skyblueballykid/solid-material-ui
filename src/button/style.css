@@ -1,6 +1,6 @@
 @import '../variables.css';
 
-$button-height: 2.25rem;
+$button-height: calc($normal-surface-height * 0.75);
 
 .button {
   position: relative;
@@ -9,6 +9,7 @@ $button-height: 2.25rem;
   line-height: normal;
   padding: 0 $normal-padding;
   cursor: pointer;
+  --ripple-border-radius: $normal-border-radius;
   &.contained, &.text {
     height: $button-height;
     border: unset;

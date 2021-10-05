@@ -1,0 +1,20 @@
+@import '../variables.css';
+
+.list {
+  box-sizing: content-box;
+  background-color: $surface-color;
+  list-style-type: none;
+  padding: 0.5rem 0;
+  & > .list-item {
+    position: relative;
+    border-radius: 0;
+    box-sizing: content-box;
+    line-height: $normal-surface-height;
+    padding: 0 $normal-padding;
+    cursor: pointer;
+    height: $normal-surface-height;
+    color: var(--on-surface-color);
+    --ripple-color: var(--on-surface-color);
+    --ripple-border-radius: 0;
+  }
+}
