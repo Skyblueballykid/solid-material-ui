@@ -38,7 +38,3 @@ $body-caption-font-stack: "Roboto", "Helvetica", "Arial", sans-serif;
   --headlines-subtitles-font-stack: $headlines-subtitles-font-stack;
   --body-caption-font-stack: $body-caption-font-stack;
 }
-
-body {
-  background-color: #121212;
-}

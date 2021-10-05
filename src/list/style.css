@@ -5,6 +5,10 @@
   background-color: $surface-color;
   list-style-type: none;
   padding: 0.5rem 0;
+  margin: 0;
+  height: calc(100% - 1rem);
+  overflow-y: auto;
+  overflow-x: hidden;
   & > .list-item {
     position: relative;
     border-radius: 0;
