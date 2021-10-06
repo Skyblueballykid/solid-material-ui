@@ -1,5 +1,6 @@
 body {
   background-color: #121212;
+  color: var(--on-surface-color);
   margin: 0;
 }
 

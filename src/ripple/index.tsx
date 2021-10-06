@@ -16,7 +16,7 @@ export default function (): JSX.Element {
 
   return (
     <div
-      className='ripple'
+      className='sjsmlui-ripple'
       onMouseDown={calculateAnimationProps}
       style={{
         '--ripple-size': `${state.size}px`,

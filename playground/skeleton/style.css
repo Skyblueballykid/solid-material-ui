@@ -7,3 +7,12 @@
 .component-list {
   height: 100vh;
 }
+
+.doc {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  height: calc(100vh - 2rem);
+  overflow-y: auto;
+  overflow-x: hidden;
+}

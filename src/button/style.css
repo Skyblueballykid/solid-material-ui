@@ -2,7 +2,7 @@
 
 $button-height: calc($normal-surface-height * 0.75);
 
-.button {
+.sjsmlui-button {
   position: relative;
   border-radius: $normal-border-radius;
   box-sizing: content-box;

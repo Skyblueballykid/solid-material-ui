@@ -10,7 +10,7 @@ interface Props extends JSX.HTMLAttributes<HTMLSpanElement> {
 export default function ({ children, color = 'primary', variant = 'body1', ...props }: Props): JSX.Element {
   return (
     <span
-      className={`typography ${toKebabCase(color)} ${variant}`}
+      className={`sjsmlui-typography ${toKebabCase(color)} ${variant}`}
       {...props}
     >
       {children}

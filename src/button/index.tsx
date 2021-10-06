@@ -11,7 +11,7 @@ interface Props extends JSX.ButtonHTMLAttributes<HTMLButtonElement> {
 export default function ({ children, color = 'primary', variant = 'contained', type = 'button', ...props }: Props): JSX.Element {
   return (
     <button
-      className={`button ${color} ${variant}`}
+      className={`sjsmlui-button ${color} ${variant}`}
       type={type}
       {...props}
     >

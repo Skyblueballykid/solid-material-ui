@@ -4,7 +4,7 @@ $ripple-hover-opacity: 0.04;
 $ripple-focus-opacity: 0.12;
 $ripple-scale: 2.5;
 
-.ripple {
+.sjsmlui-ripple {
   position: absolute;
   top: 0;
   left: 0;

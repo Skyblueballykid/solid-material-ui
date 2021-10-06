@@ -6,7 +6,7 @@ import './style.css'
 export function List ({ children, ...props }: JSX.HTMLAttributes<HTMLUListElement>): JSX.Element {
   return (
     <ul
-      className='list'
+      className='sjsmlui-list'
       {...props}
     >
       {children}

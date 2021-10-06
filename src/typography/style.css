@@ -2,7 +2,7 @@
 
 $button-height: 2.25rem;
 
-.typography {
+.sjsmlui-typography {
   box-sizing: border-box;
   &.h1, &.h2, &.h3, &.h4, &.h5, &.h6, &.subtitle1, &.subtitle2 {
     font-family: $headlines-subtitles-font-stack;

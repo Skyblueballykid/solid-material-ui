@@ -1,6 +1,6 @@
 @import '../variables.css';
 
-.list {
+.sjsmlui-list {
   box-sizing: content-box;
   background-color: $surface-color;
   list-style-type: none;
