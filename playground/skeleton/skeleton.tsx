@@ -3,8 +3,12 @@ import { For, Switch, Match } from 'solid-js'
 import { Dynamic } from 'solid-js/web'
 import { createStore } from 'solid-js/store'
 import { List, ListItem, Typography } from '../../src'
-import ComponentList from './componentList'
+import { ComponentList } from '..'
 import './style.css'
+
+interface Props {
+  componentList: ComponentList
+}
 
 function Loading (): JSX.Element {
   return <Typography color='inherit' variant='body1'>Loading...</Typography>
@@ -14,8 +18,8 @@ function NotFound (): JSX.Element {
   return <Typography color='inherit' variant='body1'>Not found</Typography>
 }
 
-export default function (): JSX.Element {
-  const ComponentListKeys = Object.keys(ComponentList)
+export default function ({ componentList }: Props): JSX.Element {
+  const ComponentListKeys = Object.keys(componentList)
   const [state, setState] = createStore({ selectedComponent: ComponentListKeys[0] })
 
   return (
@@ -36,7 +40,7 @@ export default function (): JSX.Element {
           <For each={ComponentListKeys} fallback={<Loading />}>
             {(item) => (
               <Match when={state.selectedComponent === item}>
-                <Dynamic component={ComponentList[item]} />
+                <Dynamic component={componentList[item].component} />
               </Match>
             )}
           </For>

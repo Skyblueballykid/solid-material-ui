@@ -1,8 +1,6 @@
 import type { JSX } from 'solid-js'
 import { Typography } from '../../src'
 
-// TODO: move this under src/typography
-// TODO: write useProps? hooks for doc
 export default function (): JSX.Element {
   return (
     <>

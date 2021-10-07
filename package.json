@@ -27,7 +27,7 @@
     "prebuild:package": "yarn lint:package && yarn clean:package",
     "build:package": "tsc -p src/tsconfig.json",
     "postbuild:package": "postcss src/**/*.css --base src --dir lib",
-    "dev:playground": "vite playground"
+    "dev:playground": "vite docs --config playground/vite.config.ts"
   },
   "files": [
     "/lib"

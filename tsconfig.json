@@ -11,7 +11,8 @@
     "sourceMap": true,
     "rootDirs": [
       "./src",
-      "./playground"
+      "./playground",
+      "./docs"
     ]
   }
 }
