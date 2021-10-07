@@ -1,5 +1,5 @@
 import type { JSX } from 'solid-js'
-import { For, Switch, Match } from 'solid-js'
+import { For } from 'solid-js'
 import { Dynamic } from 'solid-js/web'
 import { createStore } from 'solid-js/store'
 import { List, ListItem, Typography } from '../../src'
@@ -14,37 +14,44 @@ function Loading (): JSX.Element {
   return <Typography color='inherit' variant='body1'>Loading...</Typography>
 }
 
-function NotFound (): JSX.Element {
-  return <Typography color='inherit' variant='body1'>Not found</Typography>
-}
-
 export default function ({ componentList }: Props): JSX.Element {
-  const ComponentListKeys = Object.keys(componentList)
-  const [state, setState] = createStore({ selectedComponent: ComponentListKeys[0] })
+  const [state, setState] = createStore({
+    selectedComponent: 0,
+    props: componentList[0]?.props ?? {}
+  })
+
+  const onSelectComponent = (index: number): void => setState({
+    selectedComponent: index,
+    props: componentList[index]?.props ?? {}
+  })
 
   return (
     <div className='skeleton'>
       <div className='component-list'>
         <List>
-          <For each={ComponentListKeys} fallback={<Loading />}>
-            {(item) => (
-              <ListItem onClick={() => setState({ selectedComponent: item })}>
-                {item}
+          <For each={componentList} fallback={<Loading />}>
+            {(item, index) => (
+              <ListItem onClick={() => onSelectComponent(index())}>
+                {item.title}
               </ListItem>
             )}
           </For>
         </List>
       </div>
       <div className='doc'>
-        <Switch fallback={NotFound}>
-          <For each={ComponentListKeys} fallback={<Loading />}>
+        <div className='canvas'>
+          <Dynamic
+            component={componentList[state.selectedComponent].component}
+            {...state.props}
+          />
+        </div>
+        <div className='property-list'>
+          <For each={Object.keys(state.props)} fallback={<Loading />}>
             {(item) => (
-              <Match when={state.selectedComponent === item}>
-                <Dynamic component={componentList[item].component} />
-              </Match>
+              <div>name: {item} value: {state.props[item] as string}</div>
             )}
           </For>
-        </Switch>
+        </div>
       </div>
     </div>
   )
