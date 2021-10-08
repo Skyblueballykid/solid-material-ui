@@ -7,7 +7,7 @@ import type { Component } from 'solid-js'
 export interface PlaygroundComponent {
   component: Component
   title: string
-  props?: Record<string, unknown>
+  props: Record<string, unknown>
 }
 
 export type ComponentList = PlaygroundComponent[]

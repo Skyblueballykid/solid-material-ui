@@ -14,7 +14,7 @@ export function List ({ children, ...props }: JSX.HTMLAttributes<HTMLUListElemen
   )
 }
 
-export function ListItem ({ children, ...props }: JSX.HTMLAttributes<HTMLLIElement>): JSX.Element {
+export function ListItem ({ children, ...props }: JSX.LiHTMLAttributes<HTMLLIElement>): JSX.Element {
   return (
     <li
       className='list-item'

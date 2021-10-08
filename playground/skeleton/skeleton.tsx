@@ -15,15 +15,8 @@ function Loading (): JSX.Element {
 }
 
 export default function ({ componentList }: Props): JSX.Element {
-  const [state, setState] = createStore({
-    selectedComponent: 0,
-    props: componentList[0]?.props ?? {}
-  })
-
-  const onSelectComponent = (index: number): void => setState({
-    selectedComponent: index,
-    props: componentList[index]?.props ?? {}
-  })
+  const [state, setState] = createStore({ selectedComponent: 0 })
+  const onSelectComponent = (index: number): void => setState({ selectedComponent: index })
 
   return (
     <div className='skeleton'>
@@ -40,15 +33,16 @@ export default function ({ componentList }: Props): JSX.Element {
       </div>
       <div className='doc'>
         <div className='canvas'>
+          {/* https://github.com/solidjs/solid/issues/681 */}
           <Dynamic
             component={componentList[state.selectedComponent].component}
-            {...state.props}
+            {...componentList[state.selectedComponent].props}
           />
         </div>
         <div className='property-list'>
-          <For each={Object.keys(state.props)} fallback={<Loading />}>
+          <For each={Object.keys(componentList[state.selectedComponent].props)} fallback={<Loading />}>
             {(item) => (
-              <div>name: {item} value: {state.props[item] as string}</div>
+              <div>name: {item} value: {componentList[state.selectedComponent].props[item] as string}</div>
             )}
           </For>
         </div>
