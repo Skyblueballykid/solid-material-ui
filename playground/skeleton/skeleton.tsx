@@ -33,11 +33,12 @@ export default function ({ componentList }: Props): JSX.Element {
       </div>
       <div className='doc'>
         <div className='canvas'>
-          {/* https://github.com/solidjs/solid/issues/681 */}
-          <Dynamic
-            component={componentList[state.selectedComponent].component}
-            {...componentList[state.selectedComponent].props}
-          />
+          {() => (
+            <Dynamic
+              component={componentList[state.selectedComponent].component}
+              {...componentList[state.selectedComponent].props}
+            />
+          )}
         </div>
         <div className='property-list'>
           <For each={Object.keys(componentList[state.selectedComponent].props)} fallback={<Loading />}>
