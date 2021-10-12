@@ -1,4 +1,22 @@
 @import '../variables.css';
 
 .sjsmlui-text-field {
+  color: $on-surface-color;
+  & > input {
+    display: flex;
+    box-sizing: content-box;
+    line-height: 1.5rem;
+    font-size: 1rem;
+    letter-spacing: 0.009375rem;
+    background-color: transparent;
+    color: inherit;
+    border: unset;
+  }
+  &.outlined {
+    border: 0.0625rem solid white;
+    background-color: transparent;
+  }
+  &.filled {
+    background-color: $surface-color;
+  }
 }

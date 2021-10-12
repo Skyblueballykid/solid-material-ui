@@ -4,6 +4,7 @@ export default {
   component: TextField,
   title: 'Text field',
   props: {
-    value: 'hello'
+    value: 'hello',
+    variant: 'outlined'
   }
 }

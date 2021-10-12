@@ -1,8 +1,17 @@
 import type { JSX } from 'solid-js'
 import './style.css'
 
-export default function (props: Omit<JSX.InputHTMLAttributes<HTMLInputElement>, 'type'>): JSX.Element {
+interface Props extends Omit<JSX.InputHTMLAttributes<HTMLInputElement>, 'type'> {
+  variant?: 'outlined' | 'filled'
+}
+
+export default function ({ variant = 'outlined', ...props }: Props): JSX.Element {
   return (
-    <input className='sjsmlui-text-field' type='text' {...props} />
+    <div className={`sjsmlui-text-field ${variant}`}>
+      <input
+        type='text'
+        {...props}
+      />
+    </div>
   )
 }
