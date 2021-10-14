@@ -1,4 +1,5 @@
 import type { JSX } from 'solid-js'
+import Typography from '../typography'
 import './style.css'
 
 interface Props extends Omit<JSX.InputHTMLAttributes<HTMLInputElement>, 'type'> {
@@ -12,6 +13,7 @@ export default function ({ variant = 'outlined', ...props }: Props): JSX.Element
         type='text'
         {...props}
       />
+      <Typography variant='caption'>{props?.placeholder}</Typography>
     </div>
   )
 }

@@ -1,11 +1,5 @@
 node_modules
-lib/**/*.js
-lib/**/*.js.map
-lib/**/*.jsx
-lib/**/*.jsx.map
-lib/**/*.css
-lib/**/*.css.map
-lib/**/*.d.ts
+lib
 .vscode
 **/*.log
 playground/dist/**/*

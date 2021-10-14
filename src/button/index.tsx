@@ -1,6 +1,7 @@
 import type { JSX } from 'solid-js'
 import Ripple from '../ripple'
 import Typography from '../typography'
+import classNameFactory from '../utils/classNameFactory'
 import './style.css'
 
 interface Props extends JSX.ButtonHTMLAttributes<HTMLButtonElement> {
@@ -11,7 +12,7 @@ interface Props extends JSX.ButtonHTMLAttributes<HTMLButtonElement> {
 export default function ({ children, color = 'primary', variant = 'contained', type = 'button', ...props }: Props): JSX.Element {
   return (
     <button
-      className={`sjsmlui-button ${color} ${variant}`}
+      className={classNameFactory(['sjsmlui-button', color, variant, props?.className])}
       type={type}
       {...props}
     >

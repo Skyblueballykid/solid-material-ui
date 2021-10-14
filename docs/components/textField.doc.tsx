@@ -5,6 +5,7 @@ export default {
   title: 'Text field',
   props: {
     value: 'hello',
-    variant: 'outlined'
+    variant: 'outlined',
+    placeholder: 'Label'
   }
 }

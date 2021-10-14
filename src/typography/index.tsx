@@ -1,4 +1,5 @@
 import type { JSX } from 'solid-js'
+import classNameFactory from '../utils/classNameFactory'
 import toKebabCase from '../utils/toKebabCase'
 import './style.css'
 
@@ -10,7 +11,7 @@ interface Props extends JSX.HTMLAttributes<HTMLSpanElement> {
 export default function ({ children, color = 'primary', variant = 'body1', ...props }: Props): JSX.Element {
   return (
     <span
-      className={`sjsmlui-typography ${toKebabCase(color)} ${variant}`}
+      className={classNameFactory(['sjsmlui-typography', toKebabCase(color), variant, props?.className])}
       {...props}
     >
       {children}
