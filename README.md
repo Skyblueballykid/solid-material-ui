@@ -14,7 +14,7 @@ Material like (not everything implemented according the official [specification]
     - [ ] Header component
     - [ ] Dropdown component
     - [ ] Box component with elevation
-    - [ ] Input component
+    - [ ] Input component (W.I.P) TODO: Animation
 - [x] Make font selection variable
 - [ ] Fix ripple effect ([color calculation and opacity states](https://material.io/design/interaction/states.html#anatomy))
 - [ ] Make how to guides

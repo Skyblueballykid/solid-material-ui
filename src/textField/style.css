@@ -6,6 +6,8 @@ $default-border-color: rgba(255, 255, 255, 0.2);
   display: flex;
   color: $on-surface-color;
   position: relative;
+  padding: 0.4rem 0.5rem 0.875rem;;
+  margin: unset;
   & > input {
     flex: 1;
     box-sizing: content-box;
@@ -15,24 +17,24 @@ $default-border-color: rgba(255, 255, 255, 0.2);
     background-color: transparent;
     color: inherit;
     outline: none;
-    padding: 0.75rem 1rem 0.875rem;
+    padding: 0 0.5rem;
+    border: unset; 
   }
-  & > span {
-    position: absolute;
+  & > legend {
+    overflow: hidden;
+  }
+  & > input:placeholder-shown + legend {
+    width: 0;
+    padding: unset;
   }
   &.outlined {
-    background-color: transparent;
-    & > input {
-      border: 0.125rem solid $default-border-color;
-      border-radius: $normal-border-radius;
-      &:focus {
-        border-color: $primary-color;
-      }
+    border: 0.125rem solid $default-border-color;
+    border-radius: $normal-border-radius;
+    &:focus-within {
+      border-color: $primary-color;
     }
-    & > span {
-      top: -0.375rem;
-      left: 1.125rem;
-      overflow: hidden;
+    & > legend {
+      padding: 0 0.5rem;
     }
   }
   &.filled {

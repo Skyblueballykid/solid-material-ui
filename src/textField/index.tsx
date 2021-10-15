@@ -8,12 +8,14 @@ interface Props extends Omit<JSX.InputHTMLAttributes<HTMLInputElement>, 'type'> 
 
 export default function ({ variant = 'outlined', ...props }: Props): JSX.Element {
   return (
-    <div className={`sjsmlui-text-field ${variant}`}>
+    <fieldset className={`sjsmlui-text-field ${variant}`}>
       <input
         type='text'
         {...props}
       />
-      <Typography variant='caption'>{props?.placeholder}</Typography>
-    </div>
+      <legend>
+        <Typography variant='caption'>{props?.placeholder}</Typography>
+      </legend>
+    </fieldset>
   )
 }
