@@ -19,12 +19,12 @@
     "vite-plugin-solid": "^2.2.5"
   },
   "dependencies": {
-    "solid-js": "^1.3.5"
+    "solid-js": "^1.3.7"
   },
   "scripts": {
     "clean:package": "rm -rf lib",
     "lint:package": "ts-standard -p src/tsconfig.json src/",
-    "prebuild:package": "yarn lint:package && yarn clean:package",
+    "prebuild:package": "npm lint:package && npm clean:package",
     "build:package": "tsc -p src/tsconfig.json",
     "postbuild:package": "postcss src/**/*.css --base src --dir lib",
     "dev:playground": "vite docs --config playground/vite.config.ts"

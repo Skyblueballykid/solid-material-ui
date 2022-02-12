@@ -10,8 +10,8 @@ Material like (not everything implemented according the official [specification]
 
 ## Road map:
 
-- [ ] Make atomic folder structure
-- [ ] Implement responsible system
+- [x] Make atomic folder structure
+- [ ] Implement responsible system W.I.P.
   - [ ] Breakpoints
   - [ ] Containers
 - [ ] Implement atomic components
@@ -22,5 +22,9 @@ Material like (not everything implemented according the official [specification]
   - [ ] Checkbox
 - [ ] HOCs
   - [ ] Ripple effect
+- [ ] Implement basic playground
+  - TODO: Subtasks
 
 *Other features not planned yet, but should be planned later in the future.*
+
+
