@@ -6,7 +6,7 @@
 
 Material like (not everything implemented according the official [specification](https://material.io/)) ui library using [SolidJS](https://www.solidjs.com/) library.
 
-Please check out the [material-3](https://github.com/azuwey/solid-material-ui/tree/material-3)
+Please check out the [material-3](https://github.com/azuwey/solid-material-ui/tree/material-3) branch.
 
 ## TODOs:
 
