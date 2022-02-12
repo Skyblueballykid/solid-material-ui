@@ -4,17 +4,23 @@
 [![License](https://badgen.net/github/license/azuwey/solid-material-ui)](https://github.com/azuwey/solid-material-ui/blob/master/LICENSE)
 [![TS-Standard - Typescript Standard Style Guide](https://badgen.net/badge/code%20style/ts-standard/blue?icon=typescript)](https://github.com/standard/ts-standard)
 
+**The purpure of this branch is to experiment with the material design 3 using the [Material 3 Design Kit](https://www.figma.com/community/file/1035203688168086460) if everything goes well, this branch will be merged back into the main branch.**
+
 Material like (not everything implemented according the official [specification](https://material.io/)) ui library using [SolidJS](https://www.solidjs.com/) library.
 
-## TODOs:
+## Road map:
 
-- [ ] Make storybook like examples (W.I.P see playground)
-  - [ ] Make page skeleton
-    - [x] List component
-    - [ ] Header component
-    - [ ] Dropdown component
-    - [ ] Box component with elevation
-    - [ ] Input component (W.I.P) TODO: Animation
-- [x] Make font selection variable
-- [ ] Fix ripple effect ([color calculation and opacity states](https://material.io/design/interaction/states.html#anatomy))
-- [ ] Make how to guides
+- [ ] Make atomic folder structure
+- [ ] Implement responsible system
+  - [ ] Breakpoints
+  - [ ] Containers
+- [ ] Implement atomic components
+  - [ ] Typography
+  - [ ] Button
+  - [ ] Switch
+  - [ ] TextField
+  - [ ] Checkbox
+- [ ] HOCs
+  - [ ] Ripple effect
+
+*Other features not planned yet, but should be planned later in the future.*
