@@ -5,7 +5,7 @@ export interface Theme {
 }
 
 export interface ThemeOverrides {
-  breakpoints?: BreakpointOverrides
+  breakpoints?: Partial<BreakpointOverrides>
 }
 
 export const createTheme = (overrides?: ThemeOverrides): Theme => {
