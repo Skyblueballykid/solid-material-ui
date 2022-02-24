@@ -99,7 +99,7 @@ theme.breakpoints.only('xl')
 
 A `media query` string ready to be used with the `useMediaQuery` hook, which matches screen widths stopping at the screen size given by the breakpoint key (inclusive) and starting at the screen size given by the next breakpoint key (exclusive).
 
-If the breakpoint key matches the larges screen size specified by theme, in that case it will return a `media query`, which matches screen widths less than the screen size given by the breakpoint key (inclusive).
+If the breakpoint key matches the larges screen size specified by theme, in that case it will return a `media query`, which matches screen widths less than the screen size given by the breakpoint key (exclusive).
 
 #### Example
 
