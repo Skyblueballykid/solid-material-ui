@@ -23,11 +23,11 @@
   },
   "scripts": {
     "clean:package": "rm -rf lib",
-    "lint:package": "ts-standard -p src/tsconfig.json src/",
+    "lint:package": "ts-standard -p src/tsconfig.json src/ --fix",
     "prebuild:package": "npm lint:package && npm clean:package",
     "build:package": "tsc -p src/tsconfig.json",
     "postbuild:package": "postcss src/**/*.css --base src --dir lib",
-    "dev:playground": "vite docs --config playground/vite.config.ts"
+    "dev:docs": "vite docs"
   },
   "files": [
     "/lib"

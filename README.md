@@ -12,7 +12,8 @@ Material like (not everything implemented according the official [specification]
 
 - [x] Make atomic folder structure
 - [ ] Implement responsible system W.I.P.
-  - [ ] Breakpoints
+  - [x] Breakpoints
+  - [x] useMediaQuery hook
   - [ ] Containers
 - [ ] Implement atomic components
   - [ ] Typography
@@ -27,4 +28,6 @@ Material like (not everything implemented according the official [specification]
 
 *Other features not planned yet, but should be planned later in the future.*
 
+## Documentation
 
+You can found the documentation in the sub-folders of the [docs](docs) folder. These `.md` files later will be available in the repository's Wiki
