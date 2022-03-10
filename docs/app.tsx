@@ -17,7 +17,6 @@ export const App: Component = () => {
 
 const Element: Component = () => {
   const theme = useTheme()
-  console.log(theme.breakpoints.only('sm'))
   const isMobile = useMediaQuery((theme) => theme.breakpoints.only('sm'))
   return (
     <div>

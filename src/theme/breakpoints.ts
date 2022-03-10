@@ -20,7 +20,7 @@ export type Breakpoints = BreakpointOverrides & BreakpointFunctions
  * Default breakpoints in pixels
  *
  * @export
- * @type {Breakpoints}
+ * @type {BreakpointOverrides}
  **/
 export const defaultBreakpointValues: BreakpointOverrides = {
   xs: 0,
