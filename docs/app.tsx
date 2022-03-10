@@ -1,27 +1,33 @@
 import { Component } from 'solid-js'
-import { css } from '@emotion/css'
-import { useMediaQuery } from '../src/hooks/useMediaQuery'
-import { Theme } from '../src/theme'
-import { useTheme } from '../src/context/theme'
-
-const getStyle = (theme: Theme): string => css({
-  paddingTop: 32,
-  [`@media ${theme.breakpoints.only('sm')}`]: {
-    paddingTop: 64
-  }
-})
+import { Button } from '../src/components/atoms/button'
 
 export const App: Component = () => {
   return <div><Element /></div>
 }
 
 const Element: Component = () => {
-  const theme = useTheme()
-  const isMobile = useMediaQuery((theme) => theme.breakpoints.only('sm'))
   return (
-    <div>
-      {isMobile() ? 'mobile' : 'not mobile'}
-      <div className={getStyle(theme)}>Yo</div>
-    </div>
+    <>
+      <div>
+        <Button variant='filled'>filled</Button>
+        <Button variant='filled' disabled>filled</Button>
+      </div>
+      <div>
+        <Button variant='outlined'>outlined</Button>
+        <Button variant='outlined' disabled>outlined</Button>
+      </div>
+      <div>
+        <Button variant='text'>text</Button>
+        <Button variant='text' disabled>text</Button>
+      </div>
+      <div>
+        <Button variant='elevated'>text</Button>
+        <Button variant='elevated' disabled>text</Button>
+      </div>
+      <div>
+        <Button variant='tonal'>text</Button>
+        <Button variant='tonal' disabled>text</Button>
+      </div>
+    </>
   )
 }

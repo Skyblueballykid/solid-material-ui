@@ -46,7 +46,7 @@ A `media query` string ready to be used with the `useMediaQuery` hook, which mat
 
 ```typescript
 /* (max-width: 599px) */
-theme.breakpoints.max('sm')
+theme.breakpoints.down('sm')
 ```
 
 ### `theme.breakpoints.between`
